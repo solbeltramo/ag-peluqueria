@@ -3,11 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AG Peluquería | Más de 20 años de trayectoria</title>
-  <meta name="description" content="AG Peluquería – Color, cortes, peinados, alisados, mechas, make up, nutriciones y productos profesionales. Pedí tu turno por WhatsApp." />
+
+  <!-- SEO básico -->
+  <title>AG Peluquería | Cortes, Color, Peinados y Make Up – Liniers 568</title>
+  <meta name="description" content="AG Peluquería, más de 20 años de trayectoria. Cortes, color, peinados, alisados, reflejos, mechas, make up y nutriciones. Ubicados en Liniers 568. Pedí tu turno por WhatsApp." />
+  <meta name="keywords" content="peluquería, cortes de cabello, color, mechas, reflejos, alisado, peinados, make up, maquillaje, nutriciones, productos capilares" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://ag-peluqueria.netlify.app/" />
+
+  <!-- Open Graph (para compartir en redes) -->
+  <meta property="og:title" content="AG Peluquería | Más de 20 años de trayectoria" />
+  <meta property="og:description" content="Cortes, color, peinados, alisados, mechas, make up y más. Pedí tu turno por WhatsApp." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ag-peluqueria.netlify.app/" />
+  <meta property="og:locale" content="es_AR" />
+
+  <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -35,31 +50,20 @@
       background: var(--black);
       color: var(--white);
       text-align: center;
-      padding: 4rem 2rem 3.5rem;
+      padding: 4rem 1.5rem 3.5rem;
       position: relative;
       overflow: hidden;
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: -60px; left: 50%;
-      transform: translateX(-50%);
-      width: 400px; height: 400px;
-      background: radial-gradient(circle, rgba(255,255,255,0.04) 0%, transparent 70%);
-      pointer-events: none;
     }
 
     .logo-lockup {
       display: inline-flex;
       align-items: center;
-      gap: 0;
       margin-bottom: 0.4rem;
     }
 
     .logo-letter {
       font-family: 'Playfair Display', serif;
-      font-size: 80px;
+      font-size: clamp(56px, 15vw, 80px);
       font-weight: 700;
       color: var(--white);
       line-height: 1;
@@ -84,13 +88,13 @@
 
     .logo-sep-line {
       width: 1px;
-      height: 52px;
+      height: 48px;
       background: rgba(255,255,255,0.4);
     }
 
     .hero-tagline {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(22px, 5vw, 32px);
+      font-size: clamp(20px, 5vw, 32px);
       font-weight: 400;
       font-style: italic;
       color: var(--white);
@@ -115,22 +119,20 @@
       background: var(--wa-green);
       color: #fff;
       text-decoration: none;
-      padding: 15px 32px;
+      padding: 15px 28px;
       border-radius: 50px;
       font-size: 15px;
       font-weight: 500;
       transition: transform 0.15s, opacity 0.15s;
-      letter-spacing: 0.2px;
     }
 
     .btn-wa:hover { opacity: 0.92; transform: translateY(-1px); }
     .btn-wa:active { transform: scale(0.98); }
-
     .btn-wa svg { width: 20px; height: 20px; flex-shrink: 0; }
 
-    /* SERVICIOS */
+    /* SECCIONES */
     .section {
-      padding: 3rem 1.5rem;
+      padding: 3rem 1.25rem;
       max-width: 720px;
       margin: 0 auto;
     }
@@ -142,21 +144,22 @@
       color: var(--muted);
       font-weight: 400;
       text-align: center;
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.5rem;
     }
 
     .section-title {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(24px, 4vw, 30px);
+      font-size: clamp(22px, 5vw, 30px);
       font-weight: 400;
       text-align: center;
       margin-bottom: 2rem;
       color: var(--black);
     }
 
+    /* SERVICIOS */
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      grid-template-columns: repeat(4, 1fr);
       gap: 10px;
     }
 
@@ -169,15 +172,9 @@
       transition: box-shadow 0.15s;
     }
 
-    .service-card:hover {
-      box-shadow: 0 4px 20px rgba(0,0,0,0.07);
-    }
+    .service-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.07); }
 
-    .service-icon {
-      font-size: 26px;
-      display: block;
-      margin-bottom: 8px;
-    }
+    .service-icon { font-size: 26px; display: block; margin-bottom: 8px; }
 
     .service-name {
       font-size: 13px;
@@ -191,7 +188,7 @@
       background: var(--white);
       border-top: 0.5px solid var(--border);
       border-bottom: 0.5px solid var(--border);
-      padding: 1.75rem 2rem;
+      padding: 1.75rem 1.5rem;
       text-align: center;
     }
 
@@ -203,17 +200,113 @@
       margin: 0 auto;
     }
 
-    .products-strip strong {
-      font-weight: 500;
-      color: var(--black);
+    .products-strip strong { font-weight: 500; color: var(--black); }
+
+    /* GALERÍA */
+    .gallery-section {
+      padding: 3rem 1.25rem;
+      max-width: 720px;
+      margin: 0 auto;
     }
+
+    .gallery-featured {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border-radius: var(--radius);
+      background: #e0ddd8;
+      cursor: pointer;
+      margin-bottom: 8px;
+    }
+
+    .gallery-featured img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-featured:hover img { transform: scale(1.03); }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+
+    .gallery-item {
+      position: relative;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      border-radius: var(--radius);
+      background: #e0ddd8;
+      cursor: pointer;
+    }
+
+    .gallery-item img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover img { transform: scale(1.04); }
+
+    .gallery-label {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,0.65));
+      color: #fff;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 1.5rem 0.75rem 0.6rem;
+      font-weight: 400;
+    }
+
+    /* LIGHTBOX */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.93);
+      z-index: 999;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    .lightbox.open { display: flex; }
+
+    .lightbox img {
+      max-width: 100%;
+      max-height: 90vh;
+      object-fit: contain;
+      border-radius: 4px;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 1rem; right: 1.25rem;
+      background: none;
+      border: none;
+      color: rgba(255,255,255,0.7);
+      font-size: 32px;
+      cursor: pointer;
+      line-height: 1;
+      padding: 8px;
+    }
+
+    .lightbox-close:hover { color: #fff; }
 
     /* CONTACTO */
     .contact-section {
       background: var(--black);
       color: var(--white);
       text-align: center;
-      padding: 3rem 2rem;
+      padding: 3rem 1.5rem;
     }
 
     .contact-section .section-eyebrow { color: rgba(255,255,255,0.4); }
@@ -252,108 +345,56 @@
       text-transform: uppercase;
     }
 
-    /* GALERÍA */
-    .gallery-section {
-      padding: 3rem 1.5rem;
-      max-width: 720px;
-      margin: 0 auto;
+    /* ── RESPONSIVE ── */
+
+    /* Tablet (≤ 768px) */
+    @media (max-width: 768px) {
+      .services-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+      }
+
+      .service-card { padding: 1rem 0.5rem; }
+      .service-icon { font-size: 22px; }
+      .service-name { font-size: 12px; }
     }
 
-    .gallery-featured {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      overflow: hidden;
-      border-radius: var(--radius);
-      background: #e0ddd8;
-      cursor: pointer;
-      margin-bottom: 8px;
+    /* Mobile (≤ 540px) */
+    @media (max-width: 540px) {
+      .hero { padding: 3rem 1.25rem 2.5rem; }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+      }
+
+      .gallery-featured {
+        aspect-ratio: 4 / 3;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
+      }
+
+      /* En móvil la última fila queda de 2 — centramos el 6to ítem */
+      .gallery-grid:last-child .gallery-item:last-child:nth-child(odd) {
+        grid-column: span 2;
+        aspect-ratio: 2 / 1;
+      }
+
+      .gallery-label { font-size: 10px; }
+
+      .btn-wa {
+        font-size: 14px;
+        padding: 13px 22px;
+      }
     }
 
-    .gallery-featured img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.3s ease;
-    }
-
-    .gallery-featured:hover img { transform: scale(1.03); }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 8px;
-    }
-
-    .gallery-item {
-      position: relative;
-      aspect-ratio: 1 / 1;
-      overflow: hidden;
-      border-radius: var(--radius);
-      background: #e0ddd8;
-      cursor: pointer;
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.3s ease;
-    }
-
-    .gallery-item:hover img { transform: scale(1.04); }
-
-    .gallery-label {
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      background: linear-gradient(transparent, rgba(0,0,0,0.6));
-      color: #fff;
-      font-size: 11px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      padding: 1.5rem 0.75rem 0.6rem;
-      font-weight: 400;
-    }
-
-    /* LIGHTBOX */
-    .lightbox {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.92);
-      z-index: 999;
-      align-items: center;
-      justify-content: center;
-      padding: 1.5rem;
-    }
-
-    .lightbox.open { display: flex; }
-
-    .lightbox img {
-      max-width: 100%;
-      max-height: 90vh;
-      object-fit: contain;
-      border-radius: 4px;
-    }
-
-    .lightbox-close {
-      position: absolute;
-      top: 1.25rem; right: 1.5rem;
-      background: none;
-      border: none;
-      color: rgba(255,255,255,0.7);
-      font-size: 28px;
-      cursor: pointer;
-      line-height: 1;
-    }
-
-    .lightbox-close:hover { color: #fff; }
-
-    @media (max-width: 480px) {
-      .logo-letter { font-size: 60px; }
-      .services-grid { grid-template-columns: repeat(2, 1fr); }
-      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    /* Mobile pequeño (≤ 360px) */
+    @media (max-width: 360px) {
+      .logo-sep span { font-size: 8px; letter-spacing: 2px; }
+      .hero-sub { letter-spacing: 2px; font-size: 11px; }
     }
   </style>
 </head>
@@ -371,7 +412,7 @@
     </div>
     <p class="hero-tagline">Transformamos tu imagen,<br>realzamos tu belleza.</p>
     <p class="hero-sub">Más de 20 años de trayectoria</p>
-    <a class="btn-wa" href="https://wa.me/543564580164?text=Hola!%20Quisiera%20pedir%20un%20turno%20en%20AG%20Peluquer%C3%ADa." target="_blank" rel="noopener">
+    <a class="btn-wa" href="https://wa.me/543564580164?text=Hola!%20Quisiera%20pedir%20un%20turno%20en%20AG%20Peluquer%C3%ADa." target="_blank" rel="noopener" aria-label="Pedir turno por WhatsApp">
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
         <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.557 4.12 1.529 5.847L.057 23.882a.5.5 0 0 0 .61.61l6.035-1.472A11.955 11.955 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.006-1.372l-.36-.214-3.726.908.928-3.726-.234-.374A9.818 9.818 0 1 1 12 21.818z"/>
@@ -380,9 +421,10 @@
     </a>
   </header>
 
-  <!-- SERVICIOS -->
   <main>
-    <section class="section">
+
+    <!-- SERVICIOS -->
+    <section class="section" aria-label="Nuestros servicios">
       <p class="section-eyebrow">Lo que hacemos</p>
       <h2 class="section-title">Nuestros servicios</h2>
       <div class="services-grid">
@@ -427,58 +469,57 @@
     </div>
 
     <!-- GALERÍA -->
-    <section class="gallery-section">
+    <section class="gallery-section" aria-label="Galería de trabajos">
       <p class="section-eyebrow">Nuestro trabajo</p>
       <h2 class="section-title">Galería</h2>
 
       <!-- Imagen destacada -->
-      <div class="gallery-featured" onclick="openLightbox(this)">
-        <img src="peinado.jpg" alt="Peinado" loading="lazy" />
+      <div class="gallery-featured" onclick="openLightbox(this)" role="button" tabindex="0" aria-label="Ver peinado en grande">
+        <img src="peinado.jpg" alt="Peinado elaborado realizado en AG Peluquería" loading="lazy" />
         <span class="gallery-label">Peinado</span>
       </div>
 
       <!-- Fila 1 -->
       <div class="gallery-grid" style="margin-bottom: 8px;">
-        <div class="gallery-item" onclick="openLightbox(this)">
-          <img src="color1.webp" alt="Color" loading="lazy" />
+        <div class="gallery-item" onclick="openLightbox(this)" role="button" tabindex="0" aria-label="Ver trabajo de color">
+          <img src="color1.webp" alt="Trabajo de color rojo en AG Peluquería" loading="lazy" />
           <span class="gallery-label">Color</span>
         </div>
-        <div class="gallery-item" onclick="openLightbox(this)">
-          <img src="color2.jpg" alt="Color" loading="lazy" />
+        <div class="gallery-item" onclick="openLightbox(this)" role="button" tabindex="0" aria-label="Ver trabajo de color">
+          <img src="color2.jpg" alt="Trabajo de color rubio en AG Peluquería" loading="lazy" />
           <span class="gallery-label">Color</span>
         </div>
-        <div class="gallery-item" onclick="openLightbox(this)">
-          <img src="reflejos.jpg" alt="Reflejos" loading="lazy" />
+        <div class="gallery-item" onclick="openLightbox(this)" role="button" tabindex="0" aria-label="Ver trabajo de reflejos">
+          <img src="reflejos.jpg" alt="Reflejos realizados en AG Peluquería" loading="lazy" />
           <span class="gallery-label">Reflejos</span>
         </div>
       </div>
 
       <!-- Fila 2 -->
       <div class="gallery-grid">
-        <div class="gallery-item" onclick="openLightbox(this)">
-          <img src="make1.jpg" alt="Make up" loading="lazy" />
+        <div class="gallery-item" onclick="openLightbox(this)" role="button" tabindex="0" aria-label="Ver trabajo de make up">
+          <img src="make1.jpg" alt="Make up realizado en AG Peluquería" loading="lazy" />
           <span class="gallery-label">Make up</span>
         </div>
-        <div class="gallery-item" onclick="openLightbox(this)">
-          <img src="make2.jpg" alt="Make up" loading="lazy" />
+        <div class="gallery-item" onclick="openLightbox(this)" role="button" tabindex="0" aria-label="Ver trabajo de make up">
+          <img src="make2.jpg" alt="Make up realizado en AG Peluquería" loading="lazy" />
           <span class="gallery-label">Make up</span>
         </div>
-        <div class="gallery-item" onclick="openLightbox(this)">
-          <img src="corte.jpg" alt="Corte" loading="lazy" />
+        <div class="gallery-item" onclick="openLightbox(this)" role="button" tabindex="0" aria-label="Ver trabajo de corte">
+          <img src="corte.jpg" alt="Corte de cabello en AG Peluquería" loading="lazy" />
           <span class="gallery-label">Corte</span>
         </div>
       </div>
-
     </section>
 
     <!-- LIGHTBOX -->
-    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-      <button class="lightbox-close" onclick="closeLightbox()" aria-label="Cerrar">✕</button>
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()" role="dialog" aria-modal="true" aria-label="Imagen ampliada">
+      <button class="lightbox-close" onclick="closeLightbox()" aria-label="Cerrar imagen">✕</button>
       <img id="lightbox-img" src="" alt="" />
     </div>
 
-
-    <section class="contact-section">
+    <!-- CONTACTO -->
+    <section class="contact-section" aria-label="Contacto y ubicación">
       <p class="section-eyebrow">Vení a vernos</p>
       <h2 class="section-title">Encontranos</h2>
       <div class="contact-items">
@@ -496,7 +537,7 @@
           3564 58-0164
         </div>
       </div>
-      <a class="btn-wa" href="https://wa.me/543564580164?text=Hola!%20Quisiera%20pedir%20un%20turno%20en%20AG%20Peluquer%C3%ADa." target="_blank" rel="noopener">
+      <a class="btn-wa" href="https://wa.me/543564580164?text=Hola!%20Quisiera%20pedir%20un%20turno%20en%20AG%20Peluquer%C3%ADa." target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
           <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.557 4.12 1.529 5.847L.057 23.882a.5.5 0 0 0 .61.61l6.035-1.472A11.955 11.955 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.006-1.372l-.36-.214-3.726.908.928-3.726-.234-.374A9.818 9.818 0 1 1 12 21.818z"/>
@@ -504,10 +545,11 @@
         Contactanos por WhatsApp
       </a>
     </section>
+
   </main>
 
   <footer>
-    AG Peluquería &nbsp;·&nbsp; Liniers 568 &nbsp;·&nbsp; 3564 58-0164
+    <p>AG Peluquería &nbsp;·&nbsp; Liniers 568 &nbsp;·&nbsp; 3564 58-0164</p>
   </footer>
 
   <script>
@@ -516,13 +558,22 @@
       document.getElementById('lightbox-img').src = img.src;
       document.getElementById('lightbox-img').alt = img.alt;
       document.getElementById('lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
     }
     function closeLightbox() {
       document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
     }
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') closeLightbox();
     });
+    // Soporte teclado para galería
+    document.querySelectorAll('.gallery-item, .gallery-featured').forEach(function(el) {
+      el.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(el); }
+      });
+    });
   </script>
+
 </body>
 </html>
